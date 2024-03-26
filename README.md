@@ -64,8 +64,6 @@ Certifique-se de substituir /caminho/para/antlr-4.x-complete.jar pelo caminho re
 Deve aparecer a visualização da árvore de análise sintática
 
 
-Video: [https://youtu.be/Dbs-P95D0Q4](https://youtu.be/wdyRhklgEso)
-
 O projeto foi feito em Java com ANTLR
 
 
@@ -74,6 +72,7 @@ The project was done with Java with ANTLR
 
 <img src="print.png" alt="page-home">
 
+<img src="print2.png" alt="page-home">
 
 🔧 Tecnologias utilizadas:
 ------------------
