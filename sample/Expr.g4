@@ -13,4 +13,3 @@ NEWLINE : [\r\n]+ ; //  Definição do caractere de nova linha
 INT     : [0-9]+ ; // Definição de um número inteiro
 // Ignora espaços em branco entre tokens
 WS : [ \t]+ -> skip ;
-

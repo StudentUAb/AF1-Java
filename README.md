@@ -39,6 +39,7 @@ Definimos a gramática no arquivo `Expr.g4`:
 - **`Expr.g4`**: Este é o nome do arquivo de gramática ANTLR. ANTLR gera código Java a partir desta gramática que pode analisar e construir uma árvore de análise para o linguagem definida pela gramática.
 
 <pre>java -cp /Users/ivobaptista/www/COMPILAR/AF1/lib/antlr-4.7.2-complete.jar org.antlr.v4.Tool Expr.g4</pre>
+<pre>java -cp "/Users/ivobaptista/Documents/GitHub/ivobass.github.io/AF1-Java/lib/antlr-4.7.2-complete.jar" org.antlr.v4.Tool -visitor -o . Expr.g4</pre>
 
 Certifique-se de substituir /caminho/para/antlr-4.x-complete.jar pelo caminho real onde o arquivo antlr-4.x-complete.jar está localizado no seu sistema.
 
@@ -49,6 +50,7 @@ Certifique-se de substituir /caminho/para/antlr-4.x-complete.jar pelo caminho re
 - **`Expr*.java`**: Este padrão seleciona todos os arquivos Java no diretório atual que começam com "Expr". Estes são os arquivos gerados pelo comando anterior.
 
 <pre> javac -cp /Users/ivobaptista/www/COMPILAR/AF1/lib/antlr-4.7.2-complete.jar:. Expr*.java </pre>
+<pre>javac -cp ".:/Users/ivobaptista/Documents/GitHub/ivobass.github.io/AF1-Java/lib/antlr-4.7.2-complete.jar" *.java</pre>
 
 ## 4. Executar o TestRig do ANTLR para testar a gramática:
 
@@ -62,6 +64,31 @@ Certifique-se de substituir /caminho/para/antlr-4.x-complete.jar pelo caminho re
 <pre> java -cp "/Users/ivobaptista/www/COMPILAR/AF1/lib/antlr-4.7.2-complete.jar:." org.antlr.v4.gui.TestRig Expr expr -gui </pre>
 
 Deve aparecer a visualização da árvore de análise sintática
+
+Atividade Formativa 1
+1. Escreva um programa que dada uma expressão com número inteiros sem sinal e apenas com os operadores '+' e '-' reescreva essa expressão na notação pós-fixa.
+
+2. Acrescente ao programa anterior os operadores '*' e ´/', com a habitual precedência, a possibilidade de os números terem sinal '+' ou '-' e os parênteses.
+
+3. Implemente os programas anteriores usando a ferramenta ANTLR.
+
+Compilar o ficheiro MyInfixToPostfixConverter.java que lee o ficheiro input.txt
+
+<pre>javac MyInfixToPostfixConverter.java</pre>
+<pre>java MyInfixToPostfixConverter.java</pre>
+
+Resultado: 
+Expressão Infixa: 2 + 3
+Expressão Pós-fixa: 23+
+Expressão Infixa: 8 - 4 + 1
+Expressão Pós-fixa: 84-1+
+Expressão Infixa: 7 * 2 + 5
+Expressão Pós-fixa: 72*5+
+Expressão Infixa: (1 + 2) * 4
+Expressão Pós-fixa: 124*+
+Expressão Infixa: 10 / (5 - 3)
+Expressão Pós-fixa: 105/3-
+
 
 
 O projeto foi feito em Java com ANTLR
