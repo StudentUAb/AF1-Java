@@ -30,7 +30,7 @@ Codigo
 
 Definimos a gramática no arquivo `Expr.g4`:
  
-## 2. Gerar os Ficheiros Python com ANTLR
+## 2. Gerar os Ficheiros Java com ANTLR
 
 - **`java`**: Este é o comando para executar aplicações Java.
 - **`cp`**: A opção **`cp`** ou **`classpath`** especifica a lista de diretórios, JAR archives, e ZIP archives para procurar classes e recursos.
